@@ -8,7 +8,7 @@ public class Position {
     private float longitude;
     private float latitude;
     private float altitude;
-    private Date insert_time;
+    private Date insertTime;
 
     public int getUserId() {
         return userId;
@@ -53,12 +53,12 @@ public class Position {
         this.altitude = altitude;
     }
 
-    public Date getInsert_time() {
-        return insert_time;
+    public Date getInsertTime() {
+        return insertTime;
     }
 
-    public void setInsert_time(Date insert_time) {
-        this.insert_time = insert_time;
+    public void setInsertTime(Date insertTime) {
+        this.insertTime = insertTime;
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Position {
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
                 ", altitude=" + altitude +
-                ", insert_time=" + insert_time +
+                ", insertTime=" + insertTime +
                 '}';
     }
 }

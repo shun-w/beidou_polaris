@@ -5,7 +5,7 @@ public class User {
     private int id;
     private String userName;
     private String password;
-    private boolean is_active;
+    private boolean isActive;
 
     public User() {
     }
@@ -34,12 +34,12 @@ public class User {
         this.userName = userName;
     }
 
-    public boolean isIs_active() {
-        return is_active;
+    public boolean isActive() {
+        return isActive;
     }
 
-    public void setIs_active(boolean is_active) {
-        this.is_active = is_active;
+    public void setActive(boolean active) {
+        isActive = active;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class User {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", is_active=" + is_active +
+                ", isActive=" + isActive +
                 '}';
     }
 }
