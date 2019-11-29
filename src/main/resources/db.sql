@@ -37,6 +37,7 @@ create table notification
     id      int primary key auto_increment,
     admin_id int,
     content text(10000),
+    publish_time datetime,
     foreign key (admin_id) references admin(id),
 
 );

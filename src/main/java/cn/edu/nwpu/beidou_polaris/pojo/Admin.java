@@ -1,26 +1,23 @@
 package cn.edu.nwpu.beidou_polaris.pojo;
 
-public class User {
+public class Admin {
     private Integer id;
     private String username;
     private String password;
-    private boolean isActive;
-
-    public User(Integer id, String username, String password, boolean isActive) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.isActive = isActive;
-    }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Admin{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", isActive=" + isActive +
                 '}';
+    }
+
+    public Admin(Integer id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
     }
 
     public Integer getId() {
@@ -45,13 +42,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public boolean GetIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(boolean is_active) {
-        this.isActive = is_active;
     }
 }
