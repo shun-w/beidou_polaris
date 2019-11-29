@@ -11,6 +11,16 @@ public class Position {
     private Float altitude;
     private Date insertTime;
 
+
+
+    public Position(Integer id, Integer userId, Float longitude, Float latitude, Float altitude, Date insertTime) {
+        this.id = id;
+        this.userId = userId;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.altitude = altitude;
+        this.insertTime = insertTime;
+    }
     @Override
     public String toString() {
         return "Position{" +
@@ -22,16 +32,6 @@ public class Position {
                 ", insertTime=" + insertTime +
                 '}';
     }
-
-    public Position(Integer id, Integer userId, Float longitude, Float latitude, Float altitude, Date insertTime) {
-        this.id = id;
-        this.userId = userId;
-        this.longitude = longitude;
-        this.latitude = latitude;
-        this.altitude = altitude;
-        this.insertTime = insertTime;
-    }
-
     public Integer getId() {
         return id;
     }

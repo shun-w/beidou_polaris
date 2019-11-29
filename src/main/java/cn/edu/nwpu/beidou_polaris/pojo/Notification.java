@@ -7,7 +7,12 @@ public class Notification {
     private Integer adminId;
     private String content;
     private Date publishTime;
-
+    public Notification(Integer id, Integer adminId, String content, Date publishTime) {
+        this.id = id;
+        this.adminId = adminId;
+        this.content = content;
+        this.publishTime = publishTime;
+    }
     @Override
     public String toString() {
         return "Notification{" +
@@ -18,12 +23,7 @@ public class Notification {
                 '}';
     }
 
-    public Notification(Integer id, Integer adminId, String content, Date publishTime) {
-        this.id = id;
-        this.adminId = adminId;
-        this.content = content;
-        this.publishTime = publishTime;
-    }
+
 
     public Date getPublishTime() {
         return publishTime;

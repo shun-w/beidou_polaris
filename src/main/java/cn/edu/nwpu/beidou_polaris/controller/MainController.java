@@ -2,6 +2,7 @@ package cn.edu.nwpu.beidou_polaris.controller;
 
 import cn.edu.nwpu.beidou_polaris.pojo.Notification;
 import cn.edu.nwpu.beidou_polaris.service.NotificationService;
+//import com.sun.org.apache.xpath.internal.operations.String;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,6 @@ public class MainController {
     public ResponseEntity<Notification> notification() {
         Notification recentNotification = notificationService.getRecentNotification();
         return ResponseEntity.ok(recentNotification);
-
     }
+
 }
