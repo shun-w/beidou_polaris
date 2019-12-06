@@ -94,4 +94,16 @@ public class UserController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @PostMapping("/user/register")
+    public ResponseEntity<Void> register(String username, String password){
+        User user = new User(null, username, password, true);
+        try {
+            userService.register(user);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

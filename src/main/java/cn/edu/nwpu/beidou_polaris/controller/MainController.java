@@ -16,7 +16,7 @@ public class MainController {
 
     @GetMapping("/")
     public ResponseEntity<String> testAlive() {
-        return ResponseEntity.ok("团队服务器正常运行着!!");
+        return ResponseEntity.ok("团队通服务器正常运行着!!");
     }
 
     @GetMapping("/notification")

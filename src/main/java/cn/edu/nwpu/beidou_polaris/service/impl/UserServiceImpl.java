@@ -1,5 +1,6 @@
 package cn.edu.nwpu.beidou_polaris.service.impl;
 
+import cn.edu.nwpu.beidou_polaris.exception.UserException;
 import cn.edu.nwpu.beidou_polaris.mapper.ChatMessageMapper;
 import cn.edu.nwpu.beidou_polaris.mapper.UserMapper;
 import cn.edu.nwpu.beidou_polaris.pojo.ChatMessage;
@@ -16,8 +17,9 @@ import java.util.Date;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
-@Autowired
-private ChatMessageMapper chatMessageMapper;
+    @Autowired
+    private ChatMessageMapper chatMessageMapper;
+
     @Override
     public User login(String username, String password) {
         return userMapper.login(username, password);
@@ -26,7 +28,16 @@ private ChatMessageMapper chatMessageMapper;
     @Override
     public void sendMessage(Integer userId, String username, String message) {
         User receiver = userMapper.findUserByUsername(username);
-        ChatMessage chatMessage = new ChatMessage(null, userId, receiver.getId(),message,new Date());
+        ChatMessage chatMessage = new ChatMessage(null, userId, receiver.getId(), message, new Date());
         chatMessageMapper.saveMessage(chatMessage);
+    }
+
+    @Override
+    public void register(User user) throws UserException {
+        if (userMapper.findUserByUsername(user.getUsername()) != null) {
+            throw new UserException("用户已经存在");
+        }else{
+            userMapper.save(user);
+        }
     }
 }
