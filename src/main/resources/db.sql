@@ -25,6 +25,7 @@ create table `chat_message`
     id          int primary key auto_increment,
     sender_id   int,
     receiver_id int,
+    message varchar(10000),
     send_time   datetime,
     foreign key (sender_id) references user (id),
     foreign key (receiver_id) references user (id)

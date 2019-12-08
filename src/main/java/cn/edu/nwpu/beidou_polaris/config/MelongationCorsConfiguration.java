@@ -13,7 +13,8 @@ public class MelongationCorsConfiguration {
     public CorsFilter corsFilter(){
         //配置对象
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("http://polaris.nwpu.edu.cn");
+//        corsConfiguration.addAllowedOrigin("http://polaris.nwpu.edu.cn");
+        corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.setAllowCredentials(true);//允许携带cookie
         corsConfiguration.addAllowedMethod("*");//允许所有请求方法
         corsConfiguration.addAllowedHeader("*");//允许携带任何头信息

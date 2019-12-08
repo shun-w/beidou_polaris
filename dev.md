@@ -11,5 +11,7 @@ GET 	/notification    获取公告
 GET  /user/chat/{userId}   获取最近收到的消息
 
 POST  /user/chat/{userId}     param:  username message  给指定用户发送消息
+
 POST  /user/register  param: username password  用户注册
+
 POST  /admin/notification_upload param: content 上传公告
